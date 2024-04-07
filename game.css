@@ -1,0 +1,191 @@
+@font-face {
+    font-family: 'Irish';
+    src: url('fonts/irishgrover.ttf') format('truetype');
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    font-family: 'Space', sans-serif;
+}
+
+.background {
+    align-items: center;
+}
+
+.gambar {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.gambar:nth-child(22) {
+    z-index: 1;
+}
+
+.navigation {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    /* Mengatur susunan vertikal */
+    cursor: pointer;
+}
+
+.nav {
+    margin: 10px;
+    /* Memberikan jarak antara setiap gambar */
+    width: 60px;
+}
+
+#back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    width: 60px;
+    cursor: pointer;
+}
+
+#sky {
+    width: 100vw;
+    height: auto;
+}
+
+.stack {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    z-index: 1;
+    background-color: aliceblue;
+}
+
+#stage {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 400px;
+    z-index: 2;
+}
+
+#board {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    justify-content: center;
+    margin-top: 20px;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    border: 15px solid #755AAF;
+    z-index: 3;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#board img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid purple;
+    z-index: 4;
+}
+
+#strip {
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    top: 95%;
+}
+
+.tray {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 80%;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+
+#pieces {
+    position: absolute;
+    width: 750px;
+    height: 80px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    z-index: 5;
+    left: 50%;
+    justify-content: center;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    border: 10px solid #6D50A5;
+    background-color: white;
+}
+
+#pieces img {
+    width: 80px;
+    height: 80px;
+    margin-left: 2px;
+}
+
+.real-image {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    z-index: 6;
+}
+
+#border {
+    width: 120px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#image {
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+
+.time {
+    position: absolute;
+    top: 40%;
+    right: 33%;
+    z-index: 6;
+}
+
+#waktu {
+    width: 120px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#judulWaktu {
+    position: absolute;
+    font-size: 20px;
+    color: #E8E205;
+    top: 10px;
+    left: 70px;
+    font-family: 'Irish';
+}
+
+#turns {
+    position: absolute;
+    font-size: 20px;
+    color: #E8E205;
+    top: 60px;
+    left: 90px;
+    font-family: 'Irish';
+}

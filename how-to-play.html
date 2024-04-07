@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNZLE | Let's Start A Journey</title>
+</head>
+
+<style>
+    @font-face {
+        font-family: 'Space';
+        src: url('fonts/spacerangerbold.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Irish';
+        src: url('fonts/irishgrover.ttf') format('truetype');
+    }
+
+    body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        font-family: 'Space', sans-serif;
+    }
+
+    .back {
+        position: relative;
+    }
+
+    .gambar {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .gambar:nth-child(3) {
+        z-index: 1;
+    }
+
+    #sky {
+        width: 100vw;
+        height: auto;
+    }
+
+    #stone {
+        position: absolute;
+        width: 100vw;
+        height: auto;
+        left: 50%;
+        transform: translate(-50%, 10%);
+        bottom: 0;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        /* Mengatur susunan vertikal */
+        cursor: pointer;
+    }
+
+    .nav {
+        margin: 10px;
+        /* Memberikan jarak antara setiap gambar */
+        width: 60px;
+    }
+
+    #back {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        padding: 10px;
+        width: 60px;
+        cursor: pointer;
+    }
+
+    .kredit {
+        position: absolute;
+        top: 15%;
+        left: 28%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        height: auto;
+        z-index: 3;
+    }
+
+    .board {
+        position: absolute;
+        width: 100%;
+        z-index: 4;
+    }
+
+    .teks {
+        position: absolute;
+        top: 5%;
+        left: -25px;
+        width: 700px;
+        z-index: 1;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    }
+
+    h1 {
+        font-size: 50px;
+        color: #E8E205;
+    }
+
+    h2 {
+        font-size: 30px;
+        color: #E8E205;
+        font-family: 'Irish';
+    }
+
+    p {
+        font-size: 20px;
+        color: white;
+        font-family: 'Irish';
+    }
+</style>
+
+<body>
+    <audio id="theme-song" src="audio/plage-coquille.mp3" preload="auto"></audio>
+    <!-- Bungkusan Latar Belakang -->
+    <div class="back">
+        <img id="sky" class="gambar" src="image/sky.png">
+        <img id="stone" class="gambar" src="image/stone.png">
+    </div>
+
+    <!-- Bungkusan Button Kembali -->
+    <a href="start.html">
+        <img id="back" src="image/back.png">
+    </a>
+
+    <!-- Bungkusan Navigasi -->
+    <div class="navigation">
+        <img id="gambar" class="nav" src="image/soundon.png" data-status="on" onclick="gantiGambar()">
+    </div>
+
+    <!-- Bungkusan Tulisan -->
+    <div class="kredit">
+        <div class="board">
+            <img id="papan" src="image/credit.png" alt="">
+            <div class="teks">
+                <h1>HOW TO PLAY</h1>
+                <h2>
+                    Created By
+                </h2>
+                <p>
+                    Leader (Back End) : Risda Rahmawati Harsono (22082010040)
+                </p>
+                <p>
+                    Front End : Talia Aprianti (22082010035)
+                </p>
+                <p>
+                    Designer : Nanda Kharisma Safitri (22082010036)
+                </p>
+                <h2>
+                    Other
+                </h2>
+                <p>
+                    Music Source : Youtube
+                </p>
+                <p>
+                    Art Source : Freepik
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    var audio = document.getElementById("theme-song");
+    audio.play();
+
+    // Ganti Gambar Sound
+    function gantiGambar() {
+        var gambar = document.getElementById('gambar');
+        if (gambar.getAttribute('data-status') === 'on') {
+            gambar.src = 'image/soundoff.png'; // Ganti gambar jika sedang menampilkan gambar1
+            gambar.setAttribute('data-status', 'off');
+            var audio = document.getElementById("theme-song");
+            audio.pause();
+        } else {
+            gambar.src = 'image/soundon.png'; // Kembali ke gambar1 jika sedang menampilkan gambar2
+            gambar.setAttribute('data-status', 'on');
+            var audio = document.getElementById("theme-song");
+            audio.play();
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        document.body.classList.add("loaded");
+    });
+</script>
+
+</html>

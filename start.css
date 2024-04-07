@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'Space';
+    src: url('fonts/spacerangerbold.ttf') format('truetype');
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: 'Space', sans-serif;
+}
+
+.back {
+    position: relative;
+}
+
+.gambar {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.gambar:nth-child(3) {
+    z-index: 1;
+}
+
+#sky {
+    width: 100vw;
+    height: auto;
+}
+
+#stone {
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    bottom: 0;
+}
+
+#judul {
+    position: absolute;
+    width: 35vw;
+    left: 52%;
+    transform: translateX(-50%);
+    bottom: 15vh;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.teks {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    line-height: 0.2;
+    cursor: pointer;
+}
+
+.button {
+    color: #6D2A2F;
+    font-size: 50px;
+    transition: color 0.3s;
+}
+
+.button:hover {
+    color: #E8E205;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.light {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+    z-index: 2;
+}
+
+.lamp {
+    line-height: 0;
+    padding: 5px;
+    width: 30px;
+}
+
+.navigation {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav {
+    margin: 10px;
+    width: 60px;
+}
+
+#astro {
+    position: absolute;
+    top: 65%;
+    left: 29%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: auto;
+    z-index: 2;
+}
+
+#astro2 {
+    position: absolute;
+    top: 72%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: 400px;
+    z-index: 2;
+}
+
+#astro3 {
+    position: absolute;
+    top: 20%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: auto;
+    z-index: 2;
+}

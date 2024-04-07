@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNZLE | Let's Start A Journey</title>
+    <link rel="stylesheet" href="game.css">
+    <script src="game.js"></script>
+</head>
+
+
+<body>
+    <audio id="theme-song" src="audio/plage-coquille.mp3" preload="auto"></audio>
+
+    <!-- Bungkusan Utama -->
+    <div class="background">
+        <img id="sky" class="gambar" src="image/sky.png">
+        <img id="strip" class="gambar" src="image/strip.png">
+
+        <!-- Bungkusan Button Kembali -->
+        <a href="level.html">
+            <img id="back" src="image/back.png">
+        </a>
+
+        <!-- Bungkusan Navigasi -->
+        <div class="navigation">
+            <img id="gambar" class="nav" src="image/soundon.png" data-status="on" onclick="gantiGambar()">
+        </div>
+
+        <!-- Bungkusan Gambar Asli -->
+        <div class="real-image">
+            <img id="border" src="image/border.png">
+            <img id="image" src="" alt="" srcset="">
+        </div>
+    </div>
+
+    <!-- Bungkusan Waktu -->
+    <div class="time">
+        <img id="waktu" src="image/border.png">
+        <p id="judulWaktu">TIMER</p>
+        <span id="turns">0</span>
+    </div>
+
+    <!-- Bungkusan Menyusun Puzzle -->
+    <div class="stack">
+        <img id="stage" src="image/stage.png">
+        <div id="board">
+        </div>
+    </div>
+
+    <!-- Bungkusan Gambar Acak -->
+    <div class="tray">
+        <div id="pieces">
+        </div>
+    </div>
+    </div>
+</body>
+
+
+
+</html>

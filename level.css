@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'Space';
+    src: url('fonts/spacerangerbold.ttf') format('truetype');
+}
+
+body {
+    overflow-x: hidden;
+    /* menghilangkan scroll bawah */
+    overflow-y: hidden;
+    /* menghilangkan scroll samping */
+    font-family: 'Space', sans-serif;
+}
+
+#back {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    padding: 10px;
+    width: 60px;
+}
+
+.gambar {
+    position: fixed;
+    /* Mengatur posisi absolut untuk gambar */
+    top: 0;
+    /* Menempatkan gambar di bagian atas */
+    left: 0;
+    /* Menempatkan gambar di bagian kiri */
+}
+
+.gambar:nth-child(22) {
+    z-index: 1;
+    /* Mengatur semua gambar agar tumpuk di atas gambar pertama */
+}
+
+#sky {
+    width: 100vw;
+    /* Lebar gambar 100% dari lebar viewport */
+    height: auto;
+    /* Tinggi disesuaikan agar tidak terdistorsi */
+}
+
+#stone {
+    position: absolute;
+    /* Mengatur posisi absolut untuk gambar */
+    width: 100vw;
+    /* Lebar gambar 100% dari lebar viewport */
+    height: auto;
+    /* Tinggi disesuaikan agar tidak terdistorsi */
+    left: 50%;
+    /* Posisi horizontal di tengah */
+    transform: translate(-50%, 180%);
+    /* Pusatkan gambar horizontal dan geser ke bawah 10% */
+    bottom: 0;
+    /* Posisi di bagian bawah */
+}
+
+.teks {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    color: #E8E205;
+    z-index: 2;
+    /* Menempatkan teks di atas gambar */
+}
+
+.navigation {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    /* Mengatur susunan vertikal */
+    cursor: pointer;
+}
+
+.nav {
+    margin: 10px;
+    /* Memberikan jarak antara setiap gambar */
+    width: 50px;
+}
+
+.level {
+    position: absolute;
+    top: 35%;
+    /* Posisi di tengah vertikal */
+    left: 50%;
+    /* Posisi di tengah horizontal */
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    width: auto;
+    height: auto;
+    z-index: 3;
+    /* Menempatkan .level di atas gambar lainnya */
+}
+
+.level2 {
+    position: absolute;
+    top: 55%;
+    /* Posisi di tengah vertikal */
+    left: 50%;
+    /* Posisi di tengah horizontal */
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    width: auto;
+    height: auto;
+    z-index: 3;
+    /* Menempatkan .level di atas gambar lainnya */
+}
+
+.level3 {
+    position: absolute;
+    top: 75%;
+    /* Posisi di tengah vertikal */
+    left: 50%;
+    /* Posisi di tengah horizontal */
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    width: auto;
+    height: auto;
+    z-index: 3;
+    /* Menempatkan .level di atas gambar lainnya */
+}
+
+.lv {
+    width: 80px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+#astro5 {
+    position: absolute;
+    top: 25%;
+    left: 17%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: auto;
+    z-index: 2;
+    /* Menempatkan teks di atas gambar */
+}
+
+#astro6 {
+    position: absolute;
+    top: 72%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: 400px;
+    z-index: 2;
+    /* Menempatkan teks di atas gambar */
+}

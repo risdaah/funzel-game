@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNZLE | Let's Start A Journey</title>
+    <link rel="stylesheet" href="start.css">
+</head>
+
+<body>
+    <audio id="theme-song" src="audio/plage-coquille.mp3" preload="auto"></audio>
+    <!-- Bungkusan Latar Belakang -->
+    <div class="back">
+        <img id="sky" class="gambar" src="image/sky.png">
+        <img id="stone" class="gambar" src="image/stone.png">
+        <img id="judul" class="gambar" src="image/tittle.png">
+    </div>
+
+    <audio id="play-game" src="audio/sound-5.mp3" preload="auto"></audio>
+    <!-- Bungkusan Teks -->
+    <div class="teks">
+        <h1 class="button" onclick="klikPlay()">
+            <a href="level.html">
+                PLAY
+            </a>
+        </h1>
+        <h1 class=" button">
+            <a href="credits.html">
+                CREDITS
+            </a>
+        </h1>
+        <h1 class=" button">
+            <a href="how-to-play.html">
+                HOW TO PLAY
+            </a>
+        </h1>
+    </div>
+
+    <!-- Elemen Bintik 4-->
+    <div class="light">
+        <img class="lamp" src="image/lamp1.png">
+        <img class="lamp" src="image/lamp1.png">
+        <img class="lamp" src="image/lamp2.png">
+        <img class="lamp" src="image/lamp3.png">
+    </div>
+
+    <!-- Bungkusan Navigasi -->
+    <div class="navigation">
+        <img id="gambar" class="nav" src="image/soundon.png" data-status="on" onclick="gantiGambar()">
+        <!-- Nanti Diisi Gambar Reload -->
+    </div>
+
+    <!-- Elemen Astronot -->
+    <img id="astro" src="image/astronot.png">
+    <img id="astro2" src="image/astronot2.png">
+    <img id="astro3" src="image/astronot3.png">
+</body>
+
+<script>
+
+    var audio = document.getElementById("theme-song");
+    var main = document.getElementById("play-game");
+
+    audio.play();
+
+    function gantiGambar() {
+        var gambar = document.getElementById('gambar');
+        if (gambar.getAttribute('data-status') === 'on') {
+            gambar.src = 'image/soundoff.png'; // Ganti gambar jika sedang menampilkan gambar1
+            gambar.setAttribute('data-status', 'off');
+            var audio = document.getElementById("theme-song");
+            audio.pause();
+        } else {
+            gambar.src = 'image/soundon.png'; // Kembali ke gambar1 jika sedang menampilkan gambar2
+            gambar.setAttribute('data-status', 'on');
+            var audio = document.getElementById("theme-song");
+            audio.play();
+        }
+    }
+
+    function klikPlay() {
+        var main = document.getElementById("play-game");
+        main.play();
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        document.body.classList.add("loaded");
+    });
+</script>
+
+</html>
